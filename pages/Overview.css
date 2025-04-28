@@ -1,0 +1,135 @@
+.overview {
+    padding: 0px;
+}
+
+.over-header {
+    display: flex;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #666;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 0px;
+    align-items: center;
+    padding-left: 10px;
+    flex-wrap: wrap;
+}
+
+.panel {
+    display: flex;
+}
+
+.left-panel {
+    width: 40rem;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-panel {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 20px;
+}
+
+.over-charts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+}
+
+.over-chart-res {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 250px;
+    transition: all 0.5s ease smooth;
+}
+
+.over-chart-res .name {
+    font-size: 12px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.res-chart {
+    width: 50rem;
+}
+
+.res-chart-stacked {
+    width: 50rem;
+    height: 25rem;
+}
+
+@media (max-width: 1024px) {
+    .left-panel {
+        width: 35rem;
+    }
+
+    .right-panel {
+        margin-left: 10px;
+    }
+
+    .over-charts {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .res-chart, .res-chart-stacked {
+        width: 100%;
+    }
+
+    .over-chart-res {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .left-panel {
+        width: 100%;
+    }
+
+    .right-panel {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .over-chart-res {
+        gap: 20px;
+    }
+
+    .res-chart, .res-chart-stacked {
+        width: 100%;
+        height: auto;
+    }
+
+    .over-header {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .over-chart-res .name {
+        font-size: 10px;
+    }
+}

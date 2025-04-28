@@ -1,0 +1,33 @@
+.date-range-dropdown select {
+  padding: 5px 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 10px;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.date-range-dropdown select:hover {
+  border-color: #5160e4;
+}
+
+.date-range-dropdown {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .date-range-dropdown select {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .date-range-dropdown select {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+}

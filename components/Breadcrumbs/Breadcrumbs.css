@@ -1,0 +1,24 @@
+/* Breadcrumbs.css */
+.breadcrumbs {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    
+  }
+  
+  .breadcrumb-item {
+    margin-right: 5px;
+    color: #5160e4;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .breadcrumb-item::after {
+    content: '';
+  }
+  

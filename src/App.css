@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  margin-top: 70px;
+  overflow-y: auto;
+  margin-left: 300px;
+  min-height: 100vh;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0;
+    margin-top: 50px;
+  }
+}

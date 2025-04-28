@@ -1,0 +1,95 @@
+.top-search-report {
+    background: #ffffff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.05);
+  }
+  
+  /* Title styles */
+  .top-search-report h2 {
+    margin-bottom: 20px;
+    color: #5160e4;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  
+  /* Main table wrapper */
+  .search-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  /* Header & row styles */
+  .table-header, .table-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .table-header {
+    font-weight: 700;
+    background-color: #f5f7fb;
+    color: #333;
+  }
+  
+  .table-row {
+    font-size: 16px;
+    color: #555;
+    transition: background 0.3s;
+  }
+  
+  /* Row hover effect */
+  .table-row:hover {
+    background-color: #f0f2f7;
+  }
+  
+  /* Flex properties for columns */
+  .table-row > div, .table-header > div {
+    flex: 1;
+    text-align: left;
+  }
+  
+  /* ─── Responsive styles ─── */
+  
+  /* Tablet: adjust padding and font-size slightly */
+  @media (max-width: 768px) {
+    .top-search-report {
+      padding: 16px;
+    }
+  
+    .table-header, .table-row {
+      font-size: 14px;
+      padding: 10px 0;
+    }
+  }
+  
+  /* Mobile: collapse the layout to two columns and hide the “Avg %” column */
+  @media (max-width: 480px) {
+    .table-header, .table-row {
+      flex-direction: column; /* stack rows on top of each other */
+      text-align: left; /* keep text alignment consistent */
+    }
+  
+    /* Hide the third column (Avg %) */
+    .table-header > div:nth-child(3),
+    .table-row > div:nth-child(3) {
+      display: none;
+    }
+  
+    .top-search-report h2 {
+      font-size: 20px;
+    }
+  
+    .table-header {
+      font-size: 15px; /* Reduce font size for mobile */
+    }
+  
+    .table-row {
+      font-size: 14px; /* Reduce font size for mobile */
+      padding: 8px 0;
+    }
+  }
+  

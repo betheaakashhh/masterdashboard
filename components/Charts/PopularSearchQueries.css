@@ -1,0 +1,90 @@
+.popular-search-queries {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.05);
+  margin-top: 30px;
+  border: 1px solid #c6c0c0;
+}
+
+/* Table wrapper now scrolls if it overflows */
+.query-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide default scrollbar on WebKit and style a thin one */
+.query-table::-webkit-scrollbar {
+  height: 6px;
+}
+.query-table::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
+
+/* Header & rows */
+.query-header,
+.query-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+  min-width: 500px; /* ensure horizontal scroll kicks in before breaking */
+}
+
+.query-header {
+  font-weight: bold;
+  color: #5160e4;
+}
+
+.popular-search-queries h2 {
+  margin-bottom: 20px;
+  color: #5160e4;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.query-row span {
+  color: #555;
+}
+
+.query-row:hover {
+  background-color: #f9f9f9;
+  transition: 0.3s;
+}
+
+
+/* ─── Responsiveness ─── */
+
+/* Tablet: slightly smaller text & padding */
+@media (max-width: 768px) {
+  .popular-search-queries {
+    padding: 16px;
+  }
+  .query-header,
+  .query-row {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+}
+
+/* Mobile: collapse to two columns, hide the “Avg %” column */
+@media (max-width: 480px) {
+  .query-header,
+  .query-row {
+    grid-template-columns: 2fr 1fr; 
+    min-width: auto;
+  }
+  /* hide the third column entirely */
+  .query-header span:nth-child(3),
+  .query-row span:nth-child(3) {
+    display: none;
+  }
+  .popular-search-queries h2 {
+    font-size: 20px;
+  }
+}
